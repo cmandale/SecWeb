@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<a href="logout.php" class="button">Mandale</a>
 		<a href="welcome.php" class="button">Dylan</a>
 		<a href="button3.php" class="button">Fayzah</a>
-		<a href="button4php" class="button">Fayzah</a>
+		<a href="button4php" class="button">John</a>
    </div>
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     <p>
