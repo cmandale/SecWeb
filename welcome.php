@@ -35,12 +35,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>placeholder</title>
 </head>
 <body>
-   <div class+"banner"
+   <div class+"banner">
 		<h2>Group 7 Website</h2>
 		<a href="logout.php" class="button">Mandale</a>
 		<a href="welcome.php" class="button">Dylan</a>
 		<a href="button3.php" class="button">Fayzah</a>
 		<a href="button4php" class="button">Fayzah</a>
+   </div>
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     <p>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
