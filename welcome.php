@@ -35,7 +35,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>placeholder</title>
 </head>
 <body>
-   	<div class+"banner"
+   <div class+"banner"
 		<h2>Group 7 Website</h2>
 		<a href="logout.php" class="button">Mandale</a>
 		<a href="welcome.php" class="button">Dylan</a>
