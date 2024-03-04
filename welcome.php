@@ -13,6 +13,25 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    .banner {
+            background-color: #007bff; /* Blue color */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    .button {
+            background-color: #4CAF50; /* Green color */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+ }
     <title>placeholder</title>
 </head>
 <body>
