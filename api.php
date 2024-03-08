@@ -1,13 +1,4 @@
-	<?php
-
-session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
-}
-?>
+<?php
 	
 	if(isset($_POST["submit"])){
 	if(empty($_POST["city"])){
@@ -21,15 +12,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	$api_data =file_get_contents($api_main);
 	//print_r($api_data);
 	
+	if ($api_data === false) {
+            // Error handling for failed API request
+            echo "Failed to fetch weather data. Please try again later.";
+			} else {
+			
+			
+	
 	$weather =json_decode($api_data,true);
 	//print_r($weather);
 	
-    echo $weather ["weather"][0]["description"];
-	
-	 echo $weather["main"]["temp"];
+    echo "Weather Description: " . htmlspecialchars($weather ["weather"][0]["description"]);
+	 
+	 echo "Temperature: " . htmlspecialchars($weather["main"]["temp"]);
+	 
 	}
 }
-	
+	} 
 	?>
 	
 	<!DOCTYPE html>
@@ -50,6 +49,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		   <input name ="submit"  type ="submit" value= "check weather">
 	 </form>
 	 </section>
+	 
+	
 	
 	</body>
 	
